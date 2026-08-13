@@ -63,7 +63,5 @@ demo = gr.Interface(
     description="Enter a topic and choose how you want the Study Assistant to help you."
 )
 
-demo.launch(
-    server_name="0.0.0.0",
-    server_port=int(os.environ.get("PORT", 10000))
-)
+port = int(os.environ.get("PORT", 10000))
+demo.launch(server_name="0.0.0.0", server_port=port, show_error=True)
